@@ -1,0 +1,49 @@
+.partners {
+    &__form {
+        @include flex(flex-end, center, row);
+        flex: 1;
+
+        @include responsive(md) {
+            flex: 2;
+        }
+
+        @include responsive(sm) {
+            width: 100%;
+        }
+
+        @include responsive(xs) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input,
+        button {
+            padding: 15px 22px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0.2px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        input {
+            width: 100%;
+            background-color: #fff;
+            border-radius: 5px 0 0 5px;
+        }
+
+        button {
+            border-radius: 0px 5px 5px 0px;
+            background-color: $yellow-dark-color;
+            color: #fff;
+        }
+
+        input,
+        button {
+            @include responsive(xs) {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+}

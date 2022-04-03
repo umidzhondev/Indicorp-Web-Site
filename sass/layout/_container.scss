@@ -1,0 +1,10 @@
+.container{
+    max-width: 1100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    width: 100%;
+    @include responsive(lg){
+        max-width:95vw;
+    }
+}

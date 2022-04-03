@@ -1,0 +1,72 @@
+.button {
+    box-sizing: border-box;
+    border-radius: 37px;
+
+    &--header {
+        padding: 10px 26px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+
+        color: #fff;
+        @include transition(all, .4s, ease-in-out);
+
+        &:first-child {
+            background-color: $yellow-dark-color;
+        }
+
+        &:last-child {
+            background-color: $blue-color;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @include responsive(ss) {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__contact {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #FFA62B;
+        transition: .4s ease;
+        padding: 10px 26px;
+        border: 1px solid #FFA62B;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $yellow-dark-color;
+            color: #fff;
+        }
+    }
+
+    &__footer {
+        padding: 13px 40px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        background-color: $yellow-dark-color;
+        color: #fff;
+        border-radius: 5px;
+
+        @include responsive(xs) {
+            align-self: flex-start;
+        }
+
+        @include responsive(xxs) {
+            padding: 12px 40px;
+        }
+    }
+}

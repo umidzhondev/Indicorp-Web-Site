@@ -1,0 +1,260 @@
+// * Header
+.header {
+    &__main {
+        &-cards {
+            width: 100%;
+            @include flex(space-between, flex-start, row);
+            gap: 30px;
+            transform: translateY(20px);
+
+            @include responsive(md) {
+                gap: 15px;
+            }
+
+            @include responsive(sm) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-card {
+            box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+            background-color: #fff;
+            padding: 40px;
+            flex: 1;
+            transition: .4s ease-in-out;
+            cursor: pointer;
+            @include flex(space-between, flex-start, column);
+
+            @include responsive(lg) {
+                padding: 40px 30px;
+            }
+
+            @include responsive(md) {
+                padding: 25px 20px;
+                height: 250px;
+            }
+
+            @include responsive(sm) {
+                height: auto;
+                flex: 1 1 (100% + 15)/3;
+            }
+
+            @include responsive(xs) {
+                flex: none;
+                width: 350px;
+                margin: 0 auto;
+                padding: 35px;
+            }
+
+            @include responsive(xs) {
+                padding: 25px;
+                width: 100%;
+            }
+
+
+            svg {
+                height: 48px;
+                width: 40px;
+                margin-bottom: 13px;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+                color: $primary-color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                color: $secondary-color;
+            }
+
+            &:hover {
+                background-color: $blue-color;
+                color: #fff;
+
+                svg path {
+                    fill: #fff;
+                }
+
+                h3,
+                p {
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+}
+
+.features {
+    &__card {
+        background-color: #fff;
+        @include flex(center, center, column);
+        gap: 10px;
+        text-align: center;
+        box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.07);
+        padding: 30px 0;
+
+        img {
+            height: 48px;
+            margin-bottom: 20px;
+
+            @include responsive(lg) {
+                height: 42px;
+            }
+
+            @include responsive(xs) {
+                margin: 0;
+                height: 38px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            @extend .section--title;
+
+            @include responsive(xs) {
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.1px;
+            color: $secondary-color;
+        }
+    }
+}
+
+.practice {
+    &__cards {
+        @media(max-width:600px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        @include flex(space-between, flex-start, column);
+        padding-top: 30px;
+        width: 100%;
+        box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.07);
+
+        @media(max-width:600px) {
+            width: 340px;
+            margin: 0 auto;
+        }
+
+        @include responsive(xxs) {
+            width: 100%;
+        }
+
+        &-info {
+            @include flex(flex-start, flex-start, column);
+            width: 100%;
+            padding-left: 28px;
+            padding-right: 35px;
+
+            h5 {
+                @extend .box--title;
+            }
+
+            p {
+                @extend.section--subtitle;
+                margin-bottom: 30px;
+            }
+        }
+
+        &-imgbox {
+            width: 100%;
+            height: 140px;
+
+            img {
+                @extend .image;
+            }
+        }
+    }
+}
+
+// * Contact
+.contact {
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    
+        @include responsive(xxs){
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    &__card {
+        @include flex(center, center, column);
+        text-align: center;
+        padding: 50px 0;
+        background-color: #fff;
+
+        img {
+            height: 72px;
+            margin-bottom: 15px;
+            @include responsive(xs){
+                height: 60px;
+            }
+        }
+
+        &-addresses {
+            @include flex(center, center, column);
+            margin-bottom: 15px;
+
+            span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                text-align: center;
+                color: $primary-color;
+            }
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.1px;
+            color: $primary-color;
+            margin-bottom: 15px;
+        }
+    }
+
+    &--card--active {
+        background-color: $primary-color;
+        .button__contact {
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: $primary-color;
+            }
+        }
+        span,
+        h4 {
+            color: #fff;
+
+        }
+    }
+}

@@ -1,0 +1,21 @@
+// * FONT FACE
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+// * IMPORTING SCSS FILES
+@import "../sass/abstracts/variables";
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/extends";
+
+@import "../sass/base/reset";
+@import "../sass/base/typography"; 
+@import "../sass/base/utilities";
+
+@import "../sass/components/buttons";
+@import "../sass/components/forms";
+@import "../sass/components/cards";
+
+@import "../sass/layout/container";
+@import "../sass/layout/footer";
+@import "../sass/layout/header";
+@import "../sass/layout/navigation";
+
+@import "../sass/pages/home";

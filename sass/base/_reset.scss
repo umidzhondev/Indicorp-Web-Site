@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+    overflow-x: hidden !important;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+button,input {
+    border: none;
+    outline: none;
+}
+section{
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+i,
+button {
+    cursor: pointer;
+}

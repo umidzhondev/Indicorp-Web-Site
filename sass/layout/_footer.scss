@@ -1,0 +1,163 @@
+.footer {
+    background-color: #fff;
+
+    &__content {
+        @include flex(center, center, column);
+        width: 100%;
+    }
+
+    &__top {
+        width: 100%;
+        padding: 40px 0;
+        background-color: #fff;
+
+        &-content {
+            width: 100%;
+            @include flex(space-between, center, row);
+
+            @include responsive(xs) {
+                flex-direction: column;
+            }
+        }
+
+        &-text {
+            @include flex(space-between, flex-start, column);
+            gap: 10px;
+
+            @include responsive(sm) {
+                flex: 1;
+            }
+
+            @include responsive(xs) {
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+                color: $primary-color;
+            }
+
+            span {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+        background-color: $blue-color-2;
+        padding: 50px 0;
+    }
+
+    &__items {
+        width: 100%;
+        @include flex(flex-start, flex-start, row);
+        flex-wrap: wrap;
+
+        @include responsive(md) {
+            gap: 30px 0;
+        }
+
+        @include responsive(sm) {
+            gap: 30px;
+        }
+        @include responsive(xxs){
+         flex-direction: column;   
+        }
+    }
+
+    &__item {
+        @include flex(space-between, flex-start, column);
+        flex: 1;
+
+        &:last-child {
+            flex: 1.5;
+        }
+
+        @include responsive(md) {
+            flex: 1 1 25%;
+        }
+
+        @include responsive(xs) {
+            flex: 1 1 30%;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        &-link {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            color: #fff;
+            margin-bottom: 10px;
+            @include flex(flex-start, center, row);
+            gap: 10px;
+
+            span {
+                font-size: inherit;
+                line-height: inherit;
+                color: inherit;
+                font-weight: inherit;
+            }
+
+            img {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        padding: 25px 0;
+
+        &-content {
+            width: 100%;
+            @include flex(space-between, center, row);
+
+            @include responsive(xs) {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__social-icons {
+        @include flex(center, center, row);
+        gap: 20px;
+    }
+
+    &__social-icon {
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+
+}

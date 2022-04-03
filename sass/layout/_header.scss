@@ -1,0 +1,162 @@
+.header {
+    background-image: url("/image/header/header-main-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include responsive(xl) {
+        background-position: center;
+    }
+
+    @include responsive(lg) {
+        background-position: 80%;
+    }
+
+    @include responsive(sm) {
+        background-color: #ffffff5e;
+        background-blend-mode: color;
+    }
+    @include responsive(xs){
+     background-position: center;           
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(space-between, flex-start, column);
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 40px 0;
+        @include flex(space-between, center, row);
+
+        @include responsive(xs) {
+            z-index: 99;
+            position: fixed;
+            width: 100vw;
+            padding: 25px;
+            background-color: #f6f6f6;
+            left: 0;
+        }
+
+        &__main {
+            @include flex(space-between, center, row);
+            @include responsive(xs){
+                width: 100%;
+            }
+        }
+
+        &__logo {
+            margin-right: 117px;
+            display: flex;
+
+            @include responsive(md) {
+                margin-right: 70px;
+            }
+
+            @include responsive(sm) {
+                margin-right: 20px;
+            }
+        }
+
+        &__icons {
+            gap: 24px;
+            display: none;
+            align-items: center;
+            margin-right: 34px;
+
+            @include responsive(xs) {
+                display: flex;
+            }
+            img{
+                height: 22px;
+            }
+        }
+
+        &__menu-icon {
+            height: 24px;
+            width: auto;
+            position: relative;
+            left: 115px;
+
+            @include responsive(xl) {
+                position: static;
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+        padding-top: 115px;
+        @include flex(space-between, flex-start, column);
+
+        @include responsive(md) {
+            padding-top: 70px;
+        }
+
+        @include responsive(xs) {
+            padding-top: 130px;
+        }
+        @include responsive(ss) {
+            padding-top: 100px;
+        }
+
+        &-info {
+            width: 100%;
+            @include flex(space-between, flex-start, column);
+            width: 50%;
+            padding-bottom: 80px;
+
+            @include responsive(sm) {
+                width: 70%;
+                padding-bottom: 50px;
+            }
+            @include responsive(sm) {
+                width: 100%;
+                padding-bottom: 40px;
+            }
+            @include responsive(xs){
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        &-title {
+            letter-spacing: 0.2px;
+            font-weight: 800;
+            margin-bottom: 35px;
+            color: $primary-color;
+            width: 98%;
+            @include responsive(xs){
+                width: 100%;
+                font-weight: 700;    
+            }
+            @include responsive(ss){
+                margin-bottom: 25px;
+            }
+        }
+
+        &-description {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.2px;
+            color: $secondary-color;
+            margin-bottom: 35px;
+            width: 75%;
+            @include responsive(xs){
+             width: 100%;   
+            }
+        }
+
+        &-buttons {
+            @include flex(flex-start, center, row);
+            gap: 10px;
+            @include responsive(ss){
+                width: 100%;
+                margin: 0 auto;
+                flex-direction: column;
+            }
+        }
+    }
+}

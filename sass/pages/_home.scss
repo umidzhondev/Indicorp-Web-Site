@@ -1,0 +1,288 @@
+.features {
+    padding: 90px 0;
+    background-color: #F3F3F3;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+}
+
+.practice {
+    padding: 125px 0 80px 0;
+
+    @include responsive(lg) {
+        padding: 50px 0;
+    }
+
+    @include responsive(md) {
+        padding: 40px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 30px 0;
+    }
+
+    &__content {
+        @include flex(center, center, column);
+    }
+}
+
+.services {
+    padding: 100px 0;
+
+    @include responsive(lg) {
+        padding: 50px 0;
+    }
+
+    @include responsive(md) {
+        padding: 40px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 30px 0;
+    }
+
+    &__content {
+        @include flex(space-between, center, column);
+
+        .section--header {
+            margin-bottom: 100px;
+
+            @include responsive(lg) {
+                margin-bottom: 60px;
+            }
+
+            @include responsive(sm) {
+                margin-bottom: 40px;
+            }
+
+            @include responsive(xs) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__main {
+        @include flex(space-between, center, row);
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__imgbox {
+        @include flex(center, center, column);
+        flex: 1;
+        height: 400px;
+
+        img {
+            @extend .image;
+
+            &:last-child {
+                position: absolute;
+                width: 96px;
+                height: 96px;
+                object-fit: cover;
+
+                @include responsive(xs) {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+
+        @include responsive(sm) {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        @include flex(space-between, flex-start, column);
+        padding-left: 120px;
+        flex: 1;
+
+        @include responsive(lg) {
+            padding-left: 70px;
+        }
+
+        @include responsive(md) {
+            padding-left: 30px;
+        }
+
+        @include responsive(xs) {
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        @extend .section--title;
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(xs) {
+            text-align: center;
+        }
+    }
+
+    &__description {
+        @extend .section--subtitle;
+        margin-bottom: 50px;
+
+        @include responsive(sm) {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        @include responsive(xs) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        @include flex(space-between, flex-start, column);
+    }
+
+    &__item {
+        width: 100%;
+        @include flex(space-between, flex-start, row);
+
+        &:first-child {
+            margin-bottom: 30px;
+        }
+
+        img {
+            height: 30px;
+            margin-right: 20px;
+        }
+
+        &-text {
+            @include flex(space-between, flex-start, column);
+
+            h5 {
+                @extend .box--title;
+                margin-bottom: 5px;
+            }
+
+            span {
+                @extend .section--subtitle;
+            }
+        }
+    }
+}
+
+.partners {
+    background-color: #FAFAFA;
+    padding: 70px 0 20px 0;
+    position: relative;
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__imgboxs {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 70px;
+        grid-gap: 20px;
+
+        @include responsive(xs) {
+            grid-gap: 40px;
+        }
+    }
+
+    &__imgbox {
+        @include flex(center, center, row);
+        height: 100px;
+
+        @include responsive(xs) {
+            height: 70px;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        border-radius: 5px;
+        @include flex(space-between, center, row);
+        background: $blue-color-2;
+        margin-inline: 30px;
+        padding: 30px 50px;
+        z-index: 5;
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+        @include responsive(xs){
+         padding: 30px 25px;   
+        }
+
+        &-text {
+            @include flex(flex-start, flex-start, row);
+            flex: 1;
+
+            h3 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 0.1px;
+                color: #fff;
+                width: 75%;
+
+                @include responsive(sm) {
+                    width: 90%;
+                }
+
+                @include responsive(xs) {
+                    width: 100%;
+                }
+            }
+
+            @include responsive(sm) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        background-color: $primary-color;
+        height: 77px;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+.contact{
+    background-color: #F3F3F3;
+    padding: 80px 0 170px 0;
+    @include responsive(md){
+        padding: 100px 0;
+    }
+    @include responsive(sm){
+        padding: 80px 0;
+    }
+    @include responsive(xs){
+        padding: 60px 0;
+    }
+    @include responsive(xxs){
+        padding: 50px 0;
+    }
+    &__content{
+        @include flex(center,center,column);
+        width: 100%;
+        .section--header{
+            margin: 0;
+            padding: 0;
+            margin-bottom: 80px;
+        }
+    }
+}

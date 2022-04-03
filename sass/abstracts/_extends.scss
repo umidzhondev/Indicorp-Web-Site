@@ -1,0 +1,88 @@
+.section--title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+    color: $primary-color;
+
+    @include responsive(sm) {
+        font-size: 35px;
+        line-height: 50px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    @include responsive(xs) {
+        width: 80%;
+        font-weight: 700;
+        font-style: 30px;
+    }
+    @include responsive(xxs) {
+        width: 90%;
+    }
+}
+
+.section--subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $secondary-color;
+}
+
+.section--header {
+    @include flex(center, center, column);
+    width: 55%;
+    margin-bottom: 50px;
+    text-align: center;
+    gap: 10px;
+
+    h2 {
+        @extend .section--title;
+    }
+
+    p {
+        @extend .section--subtitle;
+        text-align: center;
+    }
+
+    @include responsive(sm) {
+        width: 80%;
+    }
+
+    @include responsive(xs) {
+        width: 90%;
+    }
+    @include responsive(xxs) {
+        width: 100%;
+    }
+}
+
+.box--title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .1px;
+    color: $primary-color;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section--cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-gap: 38px;
+}
+
+.section--card {
+    width: 100%;
+    background-color: #fff;
+}
